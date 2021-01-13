@@ -1,0 +1,10 @@
+<h1>Log In</h1>
+
+<%= form_tag sessions_path %>
+  <div class="field">
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, params[:name] %>
+  </div>
+
+  <div class="actions"><%= submit_tag "Log In" %></div>
+

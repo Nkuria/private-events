@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
+    include UsersHelper
+
     def new
+        @current_user = nil
         @user = User.new
     end
 
@@ -7,14 +10,13 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save
-             redirect_to user_path(@user)
+            session[:user_id] = @user.id
+            redirect_to user_path(@user)
         else
             flash.notice = "Error"
         end
     end
-    def user_params
-        params.require(:user).permit(:name)
-    end
+
     def show
         @user = User.find(params[:id])
     end
