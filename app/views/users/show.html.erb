@@ -1,1 +1,8 @@
+
 <p> <%= @user.name %> </p>
+<% if @created_events %>
+<% @created_events.each do |event| %> 
+    <p> Location: <%= event.location %> Time: <%= event.event_date%> </p>
+<%end%>
+    <%end%>
+    

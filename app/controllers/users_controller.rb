@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     include UsersHelper
+    
 
     def new
         @current_user = nil
@@ -19,5 +20,6 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        @created_events = User.includes(:events_created).find(params[:id]).events_created
     end
 end
