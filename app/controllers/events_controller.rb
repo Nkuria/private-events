@@ -1,13 +1,24 @@
 class EventsController < ApplicationController
+    include EventsHelper
+
    def new
+        @event = current_user.events_created.new
    end
+
     def create
-        @event = @current_user.events_created.build(events_params)
+        @event = current_user.events_created.build(events_params)
+        if @event.save
+            redirect_to user_path(current_user), notice: 'Event created!'
+        else
+            redirect_to events_new_path, notice: 'Error creating event'
+        end
     end
+
     def index
-        @events = @current_user.events_created.all
+        @events = Event.all
     end
+
     def show
-        @event = @current_user.events_created.find(params[:id])
+        @event = Event.find(params[:id])
     end
 end
