@@ -1,8 +1,18 @@
 
 <p> <%= @user.name %> </p>
-<% if @created_events %>
-<% @created_events.each do |event| %>
+
+<h3> Events created </h3>
+
+<% if @user.events_created %>
+<% @user.events_created.each do |event| %>
+    <p> Location: <%= event.location %> Time: <%= event.event_date%>
+     Description: <%= event.description %> </p>
+    <%end%>
+<%end%>
+
+<h3> Events attended </h3>
+
+<% @user.events_invited.each do |event| %>
     <p> Location: <%= event.location %> Time: <%= event.event_date%>
      Description: <%= event.description %> </p>
 <%end%>
-    <%end%>

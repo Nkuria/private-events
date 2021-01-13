@@ -1,2 +1,8 @@
 
 <p> Creator: <%= @event.creator.name%> </p>
+<% @event.attendees.each do |attendee| %>
+  <ul>
+    <li><%= link_to attendee.name, user_path(attendee) %></li>
+  </ul>
+<% end %>
+
