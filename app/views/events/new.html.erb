@@ -1,6 +1,11 @@
-<%= form_for(@event) do |f| %>
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-
-    <%= f.submit "Create" %>
-<%end%>
+<div class="card w-50 mx-auto mb-3">
+  <h4 class = "card-header bg-primary">Create Event</h4>
+  <div class="card-body">
+    <%= form_for(@event) do |f| %>
+      <h5 class = "card-title"><%= f.label :description %></h5>
+      <p class = "card-text"> <%= f.text_area :description %> </p>
+      <p class = "card-text"> <%= f.collection_check_boxes :attendee_ids, User.all, :id, :name %> </p>
+      <%= f.submit "Create" %>
+    <%end%>
+  </div>
+  </div>

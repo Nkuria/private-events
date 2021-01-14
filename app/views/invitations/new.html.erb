@@ -1,0 +1,12 @@
+<h1>Invitations#new</h1>
+<%= form_for (@invitation) do |f|%>
+  <%= f.label :event_id%>
+  <%= f.text_field :event_id%>
+  <br>
+  <%= f.label :user_id%>
+  <%= f.text_field :user_id%>
+  <br>
+
+  <%= f.submit "Create" %>
+<% end %>
+

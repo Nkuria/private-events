@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ .top-image {
+  background: #cccccc url("samantha-gades-fIHozNWfcvs-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+ }

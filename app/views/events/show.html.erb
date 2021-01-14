@@ -1,8 +1,16 @@
-
-<p> Creator: <%= @event.creator.name%> </p>
-<% @event.attendees.each do |attendee| %>
-  <ul>
-    <li><%= link_to attendee.name, user_path(attendee) %></li>
-  </ul>
-<% end %>
-
+<div class="card w-50 mx-auto">
+  <h4 class = "card-header bg-primary">
+    Event at <%= @event.location %>. Date: <%= @event.event_date %>
+  </h4>
+  <div class="card-body">
+    <h5 class = "card-title"> Creator: <%= @event.creator.name%> </h5>
+    <div class="card-text">
+      <div class="p">Attendees: </div>
+      <% @event.attendees.each do |attendee| %>
+        <ul>
+          <li><%= link_to attendee.name, user_path(attendee) %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

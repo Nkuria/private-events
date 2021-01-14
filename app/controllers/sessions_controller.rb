@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     @current_user = User.find_by(name: params[:name])
     if @current_user
       session[:user_id] = @current_user.id
-      redirect_to root_url, notice: 'Logged in!'
+      redirect_to user_path(@current_user), notice: 'Logged in!'
     else
       flash.now.alert = 'User not created'
       render 'new'
