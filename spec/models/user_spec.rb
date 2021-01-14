@@ -10,5 +10,10 @@ RSpec.describe User, type: :model do
       @user = User.new(name: '')
       expect(@user.valid?).to be false
     end
+    it 'user name must be unique' do
+      @user = User.create(name: 'John')
+      @user2 = User.new(name: 'John')
+      expect(@user2.valid?).to be false
+    end
   end
 end
