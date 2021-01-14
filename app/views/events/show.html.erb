@@ -3,7 +3,9 @@
     Event at <%= @event.location %>. Date: <%= @event.event_date %>
   </h4>
   <div class="card-body">
-    <h5 class = "card-title"> Creator: <%= @event.creator.name%> </h5>
+    <h5 class = "card-title"> Creator: <%= @event.creator.name%>
+      <%= link_to 'Invite a friend', new_invitation_path %>
+    </h5>
     <div class="card-text">
       <div class="p">Attendees: </div>
       <% @event.attendees.each do |attendee| %>
