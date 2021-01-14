@@ -1,5 +1,3 @@
-<span>Photo by <a href="https://unsplash.com/@srosinger3997?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Samantha Gades</a> on <a href="https://unsplash.com/s/photos/party?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-
 # Rails Programming
 
 ## PROJECT: Private events!
@@ -48,6 +46,9 @@ You can see the details of the event by clicking it
 You will have a sign out link if you are signed in and a sign in button if you are not signed in.
 
 ## Designed With
+- HTML
+- CSS
+- Bootstrap
 - Ruby
 - Rails
 - Git
@@ -78,6 +79,10 @@ Contributions, issues, and feature requests are welcome! Start by:
 👤 **Nick Kuria**
 - GitHub: [@Nkuria](https://github.com/Nkuria)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nkuria)
+
+## Picture by
+[Samantha Gades](https://unsplash.com/@srosinger3997?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com/s/photos/party?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
 ## Show your support
 
