@@ -17,12 +17,23 @@
   <div class="card mx-5 col-5">
     <h3 class = "card-header bg-primary">Events attended</h3>
     <div class="card-body">
+
     <% @user.events_invited.each do |event| %>
+      <% if Time.now > event.event_date %>
+        <h2> "Past events" </h2>
       <h5 class = "card-title">
         Location: <%= event.location %> Time: <%= event.event_date%>
         <%= link_to "->", event_path(event) %>
       </h5>
       <p class = "card-text ">Description: <%= event.description %> </p>
+      else
+        <h2> "Future events" </h2>
+        <h5 class = "card-title">
+          Location: <%= event.location %> Time: <%= event.event_date%>
+          <%= link_to "->", event_path(event) %>
+        </h5>
+        <p class = "card-text ">Description: <%= event.description %> </p>
+      <%end%>
     <%end%>
   </div>
   </div>

@@ -21,4 +21,5 @@ class UsersController < ApplicationController
     def show
         @user = User.includes(:events_created, :events_invited).find(params[:id])
     end
+ 
 end
