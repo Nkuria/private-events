@@ -135,6 +135,10 @@ GEM
       bundler (>= 1.15.0)
       railties (= 6.1.1)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.4)
+      actionpack (>= 5.0.1.x)
+      actionview (>= 5.0.1.x)
+      activesupport (>= 5.0.1.x)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -233,6 +237,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.1)
+  rails-controller-testing
   rspec-rails
   sass-rails (>= 6)
   selenium-webdriver
@@ -247,4 +252,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.2.1
+   2.2.5
