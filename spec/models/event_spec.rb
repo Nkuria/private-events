@@ -10,7 +10,7 @@ RSpec.describe Event, type: :model do
       expect(event.valid?).to be false
     end
     it 'makes sure description is not empty' do
-      event.description = 'First event'
+      event.description = 'First event created'
       expect(event.valid?).to be true
     end
     it 'makes sure the event has a user' do
