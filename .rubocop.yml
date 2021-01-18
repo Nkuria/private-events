@@ -57,6 +57,7 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Layout/IndentationStyle:
+Style/Tab:
+  Enabled: false
+Layout/Tab:
   EnforcedStyle: tab
-
