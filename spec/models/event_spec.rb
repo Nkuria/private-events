@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Event, type: :model do
-  let(:user) { create(:user)}
-  let(:event) {user.events.build(description: 'event created by user')}
-  let(:event1) {build(:event)}
-  context "checks validity of an event and makes sure its created by a user" do
+  let(:user) { create(:user) }
+  let(:event) { user.events.build(description: 'event created by user') }
+  let(:event1) { build(:event) }
+  context 'checks validity of an event and makes sure its created by a user' do
     it 'makes sure description is not empty' do
       event.description = ''
       expect(event.valid?).to be false
