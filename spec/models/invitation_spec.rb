@@ -4,7 +4,7 @@ RSpec.describe Invitation, type: :model do
   describe 'invitation creation' do
     let(:user1) { User.create(name: 'John') }
     let(:user2) { User.create(name: 'Peter') }
-    let(:event1) { Event.create(location: 'House', event_date: Time.now, creator: user1) }
+    let(:event1) { Event.create(location: 'House', description: 'Party', event_date: Time.now, creator: user1) }
 
     it 'creates invitation correctly' do
       invitation = Invitation.new(user: user1, event: event1)

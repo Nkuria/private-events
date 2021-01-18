@@ -7,7 +7,7 @@ RSpec.feature 'CreateEvents', type: :feature do
     visit '/login'
     fill_in 'Name',	with: 'John'
     click_button 'Log In'
-    @event = Event.create(creator: @user)
+    @event = Event.create(creator: @user, location: 'House', description: 'Party', event_date: Time.now)
   end
 
   it 'User can create an event' do
