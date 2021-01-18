@@ -58,5 +58,5 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: false
 Layout/IndentationStyle:
-  EnforcedStyle: spaces
+  EnforcedStyle: tabs
 
