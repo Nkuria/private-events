@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_date: 2021-01-13 11:27:46
+  location: MyString
+
+two:
+  event_date: 2021-01-13 11:27:46
+  location: MyString

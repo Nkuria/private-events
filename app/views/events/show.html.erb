@@ -1,0 +1,25 @@
+<div class="card w-50 mx-auto">
+  <h4 class = "card-header bg-primary">
+    Event at <%= @event.location %>. Date: <%= @event.event_date %>
+  </h4>
+  <div class="card-body">
+    <h5 class = "card-title"> Creator: <%= @event.creator.name%></h5>
+    <div class="card-text">
+      <div class="p">Attendees: </div>
+      <% @event.attendees.each do |attendee| %>
+        <ul>
+          <li><%= link_to attendee.name, user_path(attendee) %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <%= form_tag invitations_path %>
+  <div class="field card-body d-flex flex-row align-items-baseline">
+    <h5 class = "mx-3"> Add another friend? </h5>
+    <div class = "mx-3">
+      <%= select_tag :user_id, options_from_collection_for_select(User.all, 'id', 'name') %>
+    </div>
+    <div class="d-none"><%= text_field_tag :event_id, params[:event_id], value: @event.id %></div>
+    <div class="actions mx-3"><%= submit_tag "Invite friend" %></div>
+  </div>
+</div>

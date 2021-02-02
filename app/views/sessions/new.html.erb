@@ -1,0 +1,12 @@
+<div class="card w-50 mx-auto mb-3">
+  <h4 class = "card-header bg-primary">Log In</h4>
+  <div class="card-body">
+    <%= form_tag sessions_path %>
+      <div class="field">
+        <h5 class = "card-title"> <%= label_tag :name %></h5>
+        <p class = "card-text"> <%= text_field_tag :name, params[:name] %>
+      </div>
+
+      <div class="actions mt-4"><%= submit_tag "Log In" %></div>
+  </div>
+</div>

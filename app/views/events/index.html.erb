@@ -1,0 +1,9 @@
+<% @events.each do |event| %>
+  <div class="card w-75 mx-auto mb-3">
+    <h4 class = "card-header bg-primary"> Date: <%= event.event_date %> Location: <%= event.location %> </h4>
+    <div class="card-body">
+      <h5 class = "card-title"> Creator: <%= event.creator.name %> </h5>
+      <p class = "card-text"> Description: <%= event.description %></p>
+    </div>
+  </div>
+<% end %>

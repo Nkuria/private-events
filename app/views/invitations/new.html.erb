@@ -1,0 +1,9 @@
+<h1>Invitations#new</h1>
+<%= form_for (@invitation) do |f|%>
+  <%= f.label :event_id%>
+  <%= f.text_field :event_id%>
+  <br>
+  <%= collection_select(:invitation, :user_id, User.all, :id, :name, prompt: true) %>
+  <%= f.submit "Create" %>
+<% end %>
+

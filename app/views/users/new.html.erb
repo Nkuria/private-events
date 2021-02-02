@@ -1,0 +1,15 @@
+<div class="card w-50 mx-auto mb-3">
+  <h4 class = "card-header bg-primary">Sign up</h4>
+  <div class="card-body">
+    <%= form_for(@user) do |f| %>
+      <div class="field">
+        <h5 class = "card-title"> <%= f.label :name %></h5>
+        <p class = "card-text"> <%= f.text_field :name %>
+      </div>
+
+      <div class="actions mt-4"><%= f.submit "Create" %></div>
+    <%end%>
+  </div>
+</div>
+
+
